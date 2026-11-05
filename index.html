@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Atelier</title>
+<meta name="description" content="Outfits from the clothes you already own.">
+<meta name="theme-color" content="#F5F5F3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F0E0D" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Atelier">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <main id="screen" tabindex="-1"></main>
+  <nav class="tabs" aria-label="Sections">
+    <button data-act="tab" data-tab="style" class="tab"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="10" rx="6" ry="8"/><path d="M12 18v4M8 22h8"/></svg><span>Style me</span></button>
+    <button data-act="tab" data-tab="wardrobe" class="tab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6a2 2 0 1 1 2 2c-1 .4-2 1-2 2l9 6.5c.6.5.3 1.5-.5 1.5h-17c-.8 0-1.1-1-.5-1.5L12 10"/></svg><span>Wardrobe</span></button>
+    <button data-act="tab" data-tab="looks" class="tab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg><span>Looks</span></button>
+    <button data-act="tab" data-tab="profile" class="tab"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="7" height="14" rx="1"/><rect x="14" y="5" width="7" height="14" rx="1"/></svg><span>Palette &amp; me</span></button>
+  </nav>
+</div>
+<div id="sheet-root"></div>
+<div id="onboarding-root"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<input type="file" id="in-camera" accept="image/*" capture="environment" hidden>
+<input type="file" id="in-photos" accept="image/*" multiple hidden>
+<input type="file" id="in-folder" accept="image/*" multiple webkitdirectory hidden>
+<input type="file" id="in-backup" accept="application/json,.json" hidden>
+<input type="file" id="in-me" accept="image/*" hidden>
+<input type="file" id="in-replace" accept="image/*" hidden>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
